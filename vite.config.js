@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Ensures correct file paths
-})
+  server: {
+    mimeTypes: {
+      'js': 'application/javascript',
+      'jsx': 'application/javascript'
+    }
+  }
+});
